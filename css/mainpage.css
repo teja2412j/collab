@@ -1,0 +1,490 @@
+  /* header  start*/
+  .mainheading {
+      display: flex;
+      background-color: #A96B00;
+      color: white;
+      font-size: 17px;
+      font-weight: 500;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 5px;
+  }
+
+  .makeinindia {
+      height: 40px;
+
+  }
+
+  .nav-cont {
+      padding: 0
+  }
+
+  .mainbar {
+      justify-content: end !important;
+  }
+
+
+
+  .nav-item:hover a {
+      scale: 1.1;
+      color: #f79f08 !important
+  }
+
+  .nav-item {
+      margin-left: 45px !important;
+  }
+
+  .nav-item>a {
+      color: #2E5351 !important;
+      font-weight: 500;
+  }
+
+  .logoimg {
+      width: 181px;
+  }
+
+  .owl-nav i {
+      font-size: 52px;
+  }
+
+  /* header  end*/
+
+  /* owl carosal   */
+  .carousel-wrap {
+      margin: 90px auto;
+      padding: 0 5%;
+      width: 80%;
+      position: relative;
+  }
+
+  /* fix blank or flashing items on carousel */
+  .owl-carousel .item {
+      position: relative;
+      z-index: 100;
+      -webkit-backface-visibility: hidden;
+  }
+
+  /* end fix */
+  .owl-nav>div {
+      margin-top: -26px;
+      position: absolute;
+      top: 50%;
+      color: #cdcbcd;
+  }
+
+  .owl-nav i {
+      font-size: 52px;
+  }
+
+  .owl-nav .owl-prev {
+      left: -30px;
+      font-size: 30px;
+  }
+
+
+
+  .owl-nav .owl-next {
+      right: -30px;
+  }
+
+  .owl-nav {
+      text-align: center;
+      margin-top: 24px;
+  }
+
+  .owl-carousel .owl-item img {
+      display: block;
+      width: auto !important;
+  }
+
+
+  .main-headings {
+      color: #A96B00;
+      font-size: 25px;
+      font-weight: 700;
+      margin: 0;
+  }
+
+  .carousel-wrap {
+      margin: 29px auto;
+  }
+
+  /* owl acarosal end  */
+
+
+  .prod-img {
+      background-color: #FCEFD8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+
+  }
+
+  .prod-det {
+      background-color: #E4B05B;
+      height: 50px;
+      text-align: center;
+      color: #513300;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+  }
+
+  .prod-items {
+      border-radius: 9px !important;
+      overflow: hidden;
+  }
+
+  .founders-para {
+      font-size: 17px;
+      color: #111111;
+      text-align: justify;
+  }
+
+  .mission-line {
+      border: 0.6px solid #ccc9c9;
+      margin-block: 20px;
+      width: 89%;
+  }
+
+  .mission-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      background-color: #fff;
+      justify-content: flex-end;
+      padding: 13px;
+
+  }
+
+  .mission-details:hover {
+      scale: 1.1;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+   
+  }
+
+  .mission-details>p {
+      color: #5C3B00;
+      font-size: 20px;
+      font-weight: 500;
+  }
+
+  .founders {
+      background-image: url(../images/road\ background.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      padding-block: 30px;
+  }
+
+
+  /* problem identification  */
+  .prob-details {
+      padding-left: 56px;
+  }
+
+  .prob-blo {
+      background-color: #FFF2D9;
+  }
+
+  .problem-img {
+      height: 450px;
+
+  }
+
+  .prob-details>ul>li {
+      font-size: 23px;
+      color: #1B1A18;
+      margin-bottom: 10px;
+
+  }
+
+  .pro-im {
+      justify-content: end;
+  }
+
+
+  /* services  */
+  .services-para {
+      font-size: 18px;
+      color: #454545
+  }
+
+  .service-block {
+      min-height: 145px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 20px;
+
+
+  }
+
+  .services-block>h5 {
+      color: #002834;
+      font-size: 17px;
+      font-weight: 500;
+  }
+
+  .service-para {
+      color: #202020;
+      font-size: 16px;
+      font-weight: 400;
+  }
+
+  /* contact us  */
+  .form-button {
+      text-align: end;
+  }
+
+  .form-button>button {
+      background-color: #E89504;
+      color: #fff;
+  }
+
+  .inp-fil {
+      border: 1px solid #A96B00;
+  }
+
+  .contact-image {
+      width: 100%;
+  }
+
+  .cont-img {
+      justify-content: center;
+  }
+
+
+  /* footer  */
+  .footer-block {
+      background-color: #FCFFFF;
+      box-shadow: rgba(88, 163, 233, 0.3) 0px 7px 29px 0px;
+  }
+
+  .footerpara {
+      color: #414141;
+      font-size: 16px;
+      text-align: justify;
+      font-weight: 400;
+      margin-top: 15px;
+  }
+
+  .footer-details {
+      background-color: #A96B00;
+      color: #fff;
+      padding: 50px;
+      padding-bottom: 15px;
+  }
+
+  .page-links {
+      padding: 0;
+  }
+
+  .page-links>li {
+      list-style-type: none;
+      margin-bottom: 5px;
+
+  }
+
+  .page-links>li>a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #fff;
+      font-weight: 500;
+  }
+
+  .contact-num,
+  .related-link {
+      text-decoration: none;
+      font-size: 15px;
+      color: #fff;
+  }
+
+
+
+  .cont-details {
+      /* border: 1px solid */
+  }
+
+  .footer-rights {
+      background-color: #E4F3FA;
+      color: #004F70;
+      font-weight: 600;
+      font-size: 16px;
+  }
+
+  .blues {
+      color: #01AFF8 !important
+  }
+
+  .social-media {
+      display: flex;
+      gap: 25px;
+      margin-top: 14px;
+  }
+
+  /* .social-media>a>img{
+width:20px
+} */
+
+  /* youtube videoes  */
+  .youtube-products {
+
+      background-image: url("../images/Group\ 1000002879.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+
+
+  }
+
+  .youtubeheading {
+      color: #593900;
+      font-size: 23px;
+      font-weight: 700;
+      margin-top: 10px;
+  }
+
+  .ytvideo {
+      width: 406;
+      height: 151;
+  }
+
+  @media only screen and (max-width:628px) {
+
+      /* header  start*/
+      .logoimg {
+          width: 150px;
+      }
+
+      .nav-item {
+          margin-left: 30px !important;
+      }
+
+      .nav-cont {
+          padding: 10px;
+      }
+
+      .nav-item>a {
+          color: white !important;
+      }
+
+      .mainbar {
+          background-color: rgb(31, 30, 30);
+      }
+
+      /* header  end*/
+
+      /* carosal  */
+      .carousel-wrap {
+          margin: 29px auto;
+      }
+
+      .main-headings {
+          font-size: 21px;
+      }
+
+      .founder-img {
+          width: 75%;
+      }
+
+      .founders-para {
+          font-size: 16px;
+      }
+
+      .mission-details {
+          width: 80%;
+          margin: auto;
+      }
+
+
+      .mainban {
+          width: 100%
+      }
+
+      /* founder bacgground  */
+      .founders {
+          background-size: contain;
+          background-position: center;
+      }
+
+      .problem-img {
+          width: 90%;
+          margin: auto;
+          height: auto;
+      }
+
+      .prob-details {
+          padding-left: initial;
+          padding: 10px;
+      }
+
+      .prob-details>ul>li {
+          font-size: 18px;
+      }
+
+      .pro-im {
+          justify-content: center !important;
+      }
+
+      .services-block>h5 {
+          font-size: 13px;
+      }
+
+      .services-para {
+          font-size: 16px;
+      }
+
+      .links-block {
+          margin-left: initial
+      }
+
+
+      .footer-details {
+          padding: 25px
+      }
+  }
+
+  @media only screen and (min-width:629px) and (max-width:1128px) {
+      .founder-img {
+          width: 80% !important;
+      }
+
+      .pro-im {
+          /* justify-content: center !important; */
+      }
+
+      .problem-img {
+          width: 70%;
+          /* margin: auto; */
+          height: auto;
+      }
+
+      .mission-details>p {
+
+          font-size: 16px;
+      }
+
+      .prob-details {
+          padding-left: initial;
+          padding: 17px;
+      }
+
+      .contact-image {
+          width: 80%;
+          margin-bottom: 15px;
+      }
+
+      .cont-img {
+          justify-content: start;
+      }
+
+      .mainban {
+          width: 100%
+      }
+  }

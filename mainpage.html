@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background-color: #d1d1d1;
+        overflow-x: hidden;
+    }
+
+    .navbarMain {
+        background-color: #fff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 15px;
+    }
+
+    .MainBar {
+        max-width: 1600px;
+        margin: auto;
+        /* border: 1px solid; */
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logoImg {
+        margin-right: 30px
+    }
+
+    .searchbar {
+        border: 1px solid #999;
+        border-radius: 7px;
+        padding: 12px;
+        width: 750px;
+        background-color: #f0f5ff;
+
+    }
+
+    #sercInp {
+        border: none;
+        background: none;
+        width: 100%;
+        outline: none;
+        padding: 0px 9px;
+    }
+
+    .searchdiv {
+        display: flex;
+    }
+
+    .optionBtn {
+        width: 140px;
+        /* border: 1px solid; */
+        min-width: 84px;
+        display: flex;
+        justify-content: center;
+        height: 43px;
+        align-items: center;
+        border-radius: 6px;
+    }
+
+    .optDet {
+        margin-left: 9px;
+
+    }
+
+    .optDet>a {
+        text-decoration: none;
+        color: black
+    }
+
+    .logOptions {
+        display: flex;
+        flex: 1;
+        justify-content: space-evenly;
+    }
+
+    .logandIcon {
+        display: flex;
+        /* flex: 1;
+        justify-content: space-evenly; */
+
+    }
+
+    .phonecart {
+        display: none
+    }
+
+    .threeDots {
+        width: auto;
+        min-width: auto;
+        padding: 0px 16px;
+
+    }
+
+    .menubar {
+        display: none
+    }
+
+    .mobilebar {
+        display: none;
+    }
+
+
+    /* ------------ login block menu */
+
+    .loginBlock li {
+        text-align: center;
+
+    }
+
+    .loginBlock a {
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+        padding: 6px 0px;
+        color: black
+    }
+
+    #menuLogin {
+        width: 200px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 7px;
+        background-color: white;
+        position: absolute;
+        top: 101%;
+        left: 0px;
+        z-index: 111;
+        display: none;
+
+    }
+
+    .login {
+        position: relative;
+    }
+
+    .login:hover,
+    .login:hover #log {
+        background-color: #2455f4;
+        color: white !important
+    }
+
+    .login:hover #arrowDown {
+        transform: rotate(180deg);
+        transition: 0.3s ease-in-out;
+    }
+
+    .login:hover #menuLogin {
+        display: block;
+    }
+
+    .loginBlock {
+        list-style-type: none;
+        padding: 0;
+
+
+    }
+
+    /* .show {
+        display: block !important;
+
+    } */
+
+    /* items block  */
+    /* .MoreItems{
+       
+
+    } */
+    #itemsBlock {
+        display: flex;
+        max-width: 1600px;
+        background-color: #fff;
+        margin: auto;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10px;
+        padding: 11px;
+        min-height: 120px;
+        flex-wrap: wrap;
+        /* overflow-x: auto; */
+        scrollbar-width: none;
+
+    }
+
+    #itemsBlock::-webkit-scrollbar {
+        display: none;
+    }
+
+    .itempara {
+        margin: 0
+    }
+
+    .availItems {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        min-width: 130px;
+        position: relative;
+    }
+
+    .dropdata {
+        /* border: 1px solid black; */
+        position: absolute;
+        top: 100%;
+        z-index: 99999;
+        width: 177px;
+        background-color: #fff;
+        display: none;
+    }
+
+    .availItems:hover .dropdata {
+        display: block;
+    }
+
+    .dropdata ul {
+        list-style-type: none;
+        padding: 0px;
+    }
+
+    .dropdata ul>li {
+        width: 100%;
+        text-align: center;
+        padding: 1px 0px;
+        position: relative;
+
+    }
+
+    .dropdata ul>li:hover .subcatag {
+        display: block;
+    }
+
+    .dropdata ul>li>a {
+        width: 100%;
+        padding: 3px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .subcatag {
+        position: absolute;
+        left: 100%;
+        top: 0px;
+        display: none;
+        background-color: #fff;
+        width: 150px;
+    }
+
+    .dropdata ul>li>a::after {
+        content: "›";
+        float: right;
+        padding-right: 5px;
+        font-size: 12px;
+        color: #999;
+    }
+
+    .dropdata ul>li:not(:has(.subcatag))>a::after {
+        content: "";
+    }
+
+    @media only screen and (min-width:629px) and (max-width:1128px) {
+
+        .searchbar {
+            border: 1px solid #999;
+            border-radius: 7px;
+            padding: 12px;
+            width: auto
+        }
+
+        .optionBtn {
+            width: auto;
+        }
+    }
+
+    @media screen and (max-width:628px) {
+        #itemsBlock {
+            display: none;
+        }
+
+        .searchbar {
+            display: none;
+        }
+
+        .navbarMain {
+            padding: 6px;
+            width: 100%;
+        }
+
+        .MainBar {
+            max-width: 100%;
+        }
+
+        .phonecart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cartBox {
+            display: none
+        }
+
+        .optionBtn {
+            width: auto;
+        }
+
+        .sellerBox {
+            display: none;
+        }
+
+        .threeDots {
+            display: none;
+        }
+
+        .menubar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logoImg {
+            margin: auto;
+        }
+
+        .mobilebar {
+            border: 1px solid #999;
+            border-radius: 7px;
+            padding: 12px;
+            display: block;
+            background-color: #f0f5ff;
+        }
+    }
+</style>
+
+
+<body>
+
+
+    <nav class="navbarMain">
+        <div class="MainBar">
+            <div class="menubar">
+                <i class="fa fa-bars" aria-hidden="true" id="menuthree"></i>
+
+            </div>
+            <div class="logandIcon">
+                <div class="logo">
+                    <img src="./images/flip logo.png" alt="flipkart logo" class="logoImg">
+                </div>
+                <div class="searchbar">
+                    <div class="searchdiv">
+                        <i class="fa fa-search" aria-hidden="true" id="serchBtn"></i>
+                        <input type="text" placeholder="Search For Products, Brands and More" id="sercInp">
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="logOptions">
+
+                <div class="login optionBtn">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    <span class="optDet"><a href="" title="login" id="log">Login</a> <i class="fa fa-chevron-down"
+                            aria-hidden="true" id="arrowDown"></i></span>
+                    <div id="menuLogin">
+                        <ul class="loginBlock">
+                            <li><a href="">My Profile</a></li>
+                            <li><a href="">Flipcart Plus Zone</a></li>
+                            <li><a href="">Orders</a></li>
+                            <li><a href="">Wishlist</a></li>
+                            <li><a href="">Rewards</a></li>
+                            <li><a href="">Gift Cards</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="optionBtn cartBox">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="optDet"><a href="">Cart</a></span>
+                </div>
+
+                <!-- -------------phone cart  -->
+                <div class="phonecart">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+                </div>
+
+                <div class="optionBtn sellerBox">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    <span class="optDet"><a href="">Become a Seller</a></span>
+                </div>
+
+                <div class="optionBtn threeDots">
+
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class=" mobilebar">
+        <div class="searchdiv">
+            <i class="fa fa-search" aria-hidden="true" id="serchBtn"></i>
+            <input type="text" placeholder="Search For Products, Brands and More" id="sercInp">
+        </div>
+    </div>
+
+
+
+    <div class="MoreItems">
+        <div id="itemsBlock"></div>
+    </div>
+
+    <style>
+        .mobileSidebar {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            position: absolute;
+            left:0;
+            top:0;
+            z-index: 111111;
+
+        }
+
+        .sidebarlist {
+            list-style-type: none;
+
+        }
+
+        .sidebarlist>li>a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+
+        }
+        
+    </style>
+    <div class="mobileSidebar">
+        <div class="loginorsignup">
+            <a href="">Login & SignUp</a>
+        </div>
+        <ul class="sidebarlist">
+            <li><a href="#">Super Coin Zone</a></li>
+            <li><a href="#">Flipkart Plus Zone</a></li>
+            <li><a href="#">All Categories</a></li>
+            <li><a href="#">More On Flipkart</a></li>
+            <li><a href="#">Choose Language</a></li>
+            <li><a href="#">Offer Zone</a></li>
+            <li><a href="#">Sell On Flipkart</a></li>
+            <li><a href="#">My Orders</a></li>
+            <li><a href="#">Coupons</a></li>
+            <li><a href="#">My Cart</a></li>
+            <li><a href="#">My Wishlist</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">My Notifications</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Legal</a></li>
+        </ul>
+    </div>
+
+
+
+
+</body>
+
+<!-- <script>
+    let menueLogin = document.getElementById('menuLogin');
+    let login = document.getElementById('log')
+
+    login.addEventListener("click", function (e) {
+        e.preventDefault();
+        menueLogin.classList.toggle("show");
+    })
+</script> -->
+<script>
+    let menubar=document.getElementById("menuthree");
+   menubar.addEventListener('click',function(){
+    
+   })
+</script>
+
+<script>
+
+
+    let ItemDetails = [
+        {
+            img: "./images/img1.png",
+            itemName: "Kilos"
+        },
+        {
+            img: "./images/img2.png",
+            itemName: "Mobiles",
+            moreData: [
+                {
+                    category: "Men's Top wear",
+                    subcategories: ["T-Shirts", "Shirts", "Sweatshirts", "Jackets"]
+                },
+                {
+                    category: "Men'sBottom wear",
+                    subcategories: ["Jeans", "Shorts", "Joggers"]
+                },
+                {
+                    category: "Women Ethnic",
+                    subcategories: ["Sarees", "Kurtas", "Lehenga Choli"]
+                },
+                {
+                    category: "Men Footwear",
+                    subcategories: ["Casual Shoes", "Formal Shoes", "Sandals"]
+                },
+                {
+                    category: "Women Footwear",
+                    subcategories: ["Heels", "Flats", "Sneakers"]
+                },
+                {
+                    category: "Watches and Accessories",
+                    subcategories: ["Watches", "Wallets", "Belts"]
+                },
+                {
+                    category: "Women Western",
+                    subcategories: ["Dresses", "Tops", "Skirts"]
+                },
+                {
+                    category: "Bags, Suitcase and Luggage",
+                    subcategories: ["Backpacks", "Suitcases", "Duffel Bags"]
+                },
+                {
+                    category: "Kids",
+                    subcategories: ["Boys Clothing", "Girls Clothing", "Toys"]
+                },
+                {
+                    category: "Essentials",
+                    subcategories: ["Masks", "Sanitizers", "Soaps"]
+                },
+                {
+                    category: "Winter",
+                    subcategories: ["Jackets", "Sweaters", "Thermals"]
+                }
+            ]
+        },
+        {
+            img: "./images/img3.png",
+            itemName: "Fashion",
+            moreData: [
+                {
+                    category: "Men's Top wear",
+                    subcategories: ["T-Shirts", "Shirts", "Sweatshirts", "Jackets"]
+                },
+                {
+                    category: "Men'sBottom wear",
+                    subcategories: ["Jeans", "Shorts", "Joggers"]
+                },
+                {
+                    category: "Women Ethnic",
+                    subcategories: ["Sarees", "Kurtas", "Lehenga Choli"]
+                },
+                {
+                    category: "Men Footwear",
+                    subcategories: ["Casual Shoes", "Formal Shoes", "Sandals"]
+                },
+                {
+                    category: "Women Footwear",
+                    subcategories: ["Heels", "Flats", "Sneakers"]
+                },
+                {
+                    category: "Watches and Accessories",
+                    subcategories: ["Watches", "Wallets", "Belts"]
+                },
+                {
+                    category: "Women Western",
+                    subcategories: ["Dresses", "Tops", "Skirts"]
+                },
+                {
+                    category: "Bags, Suitcase and Luggage",
+                    subcategories: ["Backpacks", "Suitcases", "Duffel Bags"]
+                },
+                {
+                    category: "Kids",
+                    subcategories: ["Boys Clothing", "Girls Clothing", "Toys"]
+                },
+                {
+                    category: "Essentials",
+                    subcategories: ["Masks", "Sanitizers", "Soaps"]
+                },
+                {
+                    category: "Winter",
+                    subcategories: ["Jackets", "Sweaters", "Thermals"]
+                }
+            ]
+        },
+        {
+            img: "./images/img4.png",
+            itemName: "Electronics"
+        },
+        {
+            img: "./images/img5.png",
+            itemName: "Home & Furniture"
+        },
+        {
+            img: "./images/img6.png",
+            itemName: "Appliances"
+        },
+        {
+            img: "./images/img7.png",
+            itemName: "Filght Bookings"
+        },
+        {
+            img: "./images/img8.png",
+            itemName: "Beauty, Toys & More"
+        },
+        {
+            img: "./images/img9.png",
+            itemName: "Two Wheelers",
+            moreData: [
+                {
+                    category: "Two Wheeler Types",
+                    subcategories: ["Petrol Vehicle", "Diesel Vehicle"]
+                }
+            ]
+        }
+    ];
+
+
+    let insertDiv = document.getElementById("itemsBlock");
+    window.onload = function () {
+        ItemDetails.map((item) => {
+            let imgbox = document.createElement("div");
+            imgbox.classList.add("availItems");
+            let imgDiv = document.createElement("img");
+            imgDiv.setAttribute("src", `${item.img}`);
+
+            let itemName = document.createElement("p");
+            itemName.classList.add("itempara");
+            itemName.textContent = `${item.itemName}`;
+            imgbox.appendChild(imgDiv);
+            imgbox.appendChild(itemName);
+            insertDiv.appendChild(imgbox)
+
+            if (item.moreData) {
+                let moredata = document.createElement("div");
+                moredata.classList.add("dropdata");
+                let itemList = document.createElement("ul");
+
+                item.moreData.forEach(element => {
+
+                    let itemlistNames = document.createElement("li");
+                    let itemInsertTOatag = document.createElement("a");
+                    itemInsertTOatag.setAttribute("href", "#");
+                    itemInsertTOatag.innerHTML = `${element.category}`;
+
+
+                    itemlistNames.appendChild(itemInsertTOatag);
+                    itemList.appendChild(itemlistNames);
+                    moredata.appendChild(itemList);
+
+                    if (element.subcategories && element.subcategories.length > 0) {
+                        let subcat = document.createElement("ul");
+                        subcat.classList.add("subcatag");
+
+                        element.subcategories.forEach((category) => {
+                            let catag = document.createElement("li");
+                            let atag = document.createElement("a");
+                            atag.setAttribute("href", "#");
+                            atag.innerHTML = `${category}`;
+                            catag.appendChild(atag);
+                            subcat.appendChild(catag);
+                        });
+
+                        // Append to the li that holds the main category
+                        itemlistNames.appendChild(subcat);
+                    }
+
+                    imgbox.appendChild(moredata);
+
+
+                });
+
+            }
+
+        })
+    }
+
+</script>
+
+</html>
